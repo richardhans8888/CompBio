@@ -1,0 +1,5 @@
+model,auc,avg_precision,precision,recall,f1
+region mean,0.804,0.273,0.209,0.695,0.321
+climatology,0.78,0.333,0.491,0.107,0.176
+seasonal naive,0.603,0.157,0.305,0.276,0.289
+gradient boosting,0.808,0.376,0.314,0.588,0.41

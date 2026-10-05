@@ -1,0 +1,148 @@
+download run started Mon Oct  5 06:46:20 WIB 2026
+
+==============================================================
+>>> ERA5-Land soil moisture, 4 depths (no account needed)
+==============================================================
+get    kaoping ... ok  444K
+get    southern ... ok  444K
+get    central ... ok  476K
+get    northern ... ok  444K
+get    taipei ... ok  448K
+get    eastern ... BAD RESPONSE - the variable names may have changed
+       --- first 500 chars, send this to Claude ---
+Unexpected error while streaming data: timeoutReached
+get    koutiala ... BAD RESPONSE - the variable names may have changed
+       --- first 500 chars, send this to Claude ---
+Unexpected error while streaming data: timeoutReached
+get    sikasso ... ok  444K
+get    bamako ... ok  460K
+get    segou ... ok  444K
+get    mopti ... ok  448K
+get    bobo ... ok  444K
+get    ouagadougou ... HTTP 429
+       --- response ---
+{"reason":"Hourly API request limit exceeded. Please try again in the next hour.","error":true}
+       --- curl error ---
+
+get    korhogo ... HTTP 429
+       --- response ---
+{"reason":"Hourly API request limit exceeded. Please try again in the next hour.","error":true}
+       --- curl error ---
+
+
+files in /Users/richard/Documents/Binus/Semester 5/Computation Bio 1/data/raw/soilmoisture:
+drwxr-xr-x  18 richard  staff     576 Oct  5 06:52 .
+drwxr-xr-x   6 richard  staff     192 Oct  5 06:46 ..
+-rw-r--r--   1 richard  staff  452300 Oct  5 06:50 sm-bamako.json
+-rw-r--r--   1 richard  staff  452342 Oct  5 06:51 sm-bobo.json
+-rw-r--r--   1 richard  staff  453290 Oct  5 06:47 sm-central.json
+-rw-r--r--   1 richard  staff       0 Oct  5 06:48 sm-eastern.json.err
+-rw-r--r--   1 richard  staff      53 Oct  5 06:48 sm-eastern.json.rejected
+-rw-r--r--   1 richard  staff  452866 Oct  5 06:46 sm-kaoping.json
+-rw-r--r--   1 richard  staff       0 Oct  5 06:52 sm-korhogo.json.err
+-rw-r--r--   1 richard  staff       0 Oct  5 06:48 sm-koutiala.json.err
+-rw-r--r--   1 richard  staff      53 Oct  5 06:49 sm-koutiala.json.rejected
+-rw-r--r--   1 richard  staff  452267 Oct  5 06:51 sm-mopti.json
+-rw-r--r--   1 richard  staff  452706 Oct  5 06:47 sm-northern.json
+-rw-r--r--   1 richard  staff       0 Oct  5 06:51 sm-ouagadougou.json.err
+-rw-r--r--   1 richard  staff  452157 Oct  5 06:50 sm-segou.json
+-rw-r--r--   1 richard  staff  452386 Oct  5 06:50 sm-sikasso.json
+-rw-r--r--   1 richard  staff  452947 Oct  5 06:46 sm-southern.json
+-rw-r--r--   1 richard  staff  452992 Oct  5 06:48 sm-taipei.json
+
+4 point(s) failed. Send the error block above to Claude - do not
+edit the URL by guessing, the variable names are version-specific.
+    exit=1
+
+==============================================================
+>>> SoilGrids soil properties (no account needed)
+==============================================================
+get    kaoping ... ok
+get    southern ... ok
+get    central ... ok
+get    northern ... ok
+get    taipei ... ok
+get    eastern ... ok
+get    koutiala ... ok
+get    sikasso ... ok
+get    bamako ... ok
+get    segou ... ok
+get    mopti ... ok
+get    bobo ... ok
+get    ouagadougou ... ok
+get    korhogo ... ok
+
+drwxr-xr-x  16 richard  staff   512 Oct  5 06:59 .
+drwxr-xr-x   7 richard  staff   224 Oct  5 06:52 ..
+-rw-r--r--   1 richard  staff  6130 Oct  5 06:56 soil-bamako.json
+-rw-r--r--   1 richard  staff  6131 Oct  5 06:58 soil-bobo.json
+-rw-r--r--   1 richard  staff  6132 Oct  5 06:53 soil-central.json
+-rw-r--r--   1 richard  staff  6073 Oct  5 06:55 soil-eastern.json
+-rw-r--r--   1 richard  staff  6132 Oct  5 06:52 soil-kaoping.json
+-rw-r--r--   1 richard  staff  6130 Oct  5 06:59 soil-korhogo.json
+-rw-r--r--   1 richard  staff  6060 Oct  5 06:55 soil-koutiala.json
+-rw-r--r--   1 richard  staff  6131 Oct  5 06:57 soil-mopti.json
+-rw-r--r--   1 richard  staff  6072 Oct  5 06:54 soil-northern.json
+-rw-r--r--   1 richard  staff  6132 Oct  5 06:58 soil-ouagadougou.json
+-rw-r--r--   1 richard  staff  6131 Oct  5 06:57 soil-segou.json
+-rw-r--r--   1 richard  staff  6132 Oct  5 06:55 soil-sikasso.json
+-rw-r--r--   1 richard  staff  6077 Oct  5 06:53 soil-southern.json
+-rw-r--r--   1 richard  staff  6131 Oct  5 06:54 soil-taipei.json
+
+Done. Now run:  python3 scripts/soilgrids_to_csv.py
+    exit=0
+
+==============================================================
+>>> GLDAS groundwater (needs Earthdata login - see script header)
+==============================================================
+ERROR: no Earthdata credentials found in ~/.netrc
+Follow the ONE-TIME SETUP block at the top of this script first.
+    exit=1
+
+>>> converting to CSV
+--- soil_moisture_to_csv
+wrote soilmoisture-bamako.csv              8674 days, 8674 non-missing surface values
+wrote soilmoisture-bobo.csv                8674 days, 8674 non-missing surface values
+wrote soilmoisture-central.csv             8674 days, 8674 non-missing surface values
+wrote soilmoisture-kaoping.csv             8674 days, 8674 non-missing surface values
+wrote soilmoisture-mopti.csv               8674 days, 8674 non-missing surface values
+wrote soilmoisture-northern.csv            8674 days, 8674 non-missing surface values
+wrote soilmoisture-segou.csv               8674 days, 8674 non-missing surface values
+wrote soilmoisture-sikasso.csv             8674 days, 8674 non-missing surface values
+wrote soilmoisture-southern.csv            8674 days, 8674 non-missing surface values
+wrote soilmoisture-taipei.csv              8674 days, 8674 non-missing surface values
+
+install numpy to run the bucket comparison:  pip install numpy
+    exit=1
+--- soilgrids_to_csv
+wrote /Users/richard/Documents/Binus/Semester 5/Computation Bio 1/data/processed/soilgrids.csv  14 sites, 48 properties
+
+site                 clay_0_5cm      phh2o_0_5cm    phh2o_30_60cm       sand_0_5cm        soc_0_5cm
+bamako                      nan              nan              nan              nan              nan
+bobo                        nan              nan              nan              nan              nan
+central                     nan              nan              nan              nan              nan
+eastern                    31.5              5.1              5.2             31.0             74.9
+kaoping                     nan              nan              nan              nan              nan
+korhogo                     nan              nan              nan              nan              nan
+koutiala                   10.5              5.8              5.8             54.3              8.5
+mopti                       nan              nan              nan              nan              nan
+northern                   30.9              5.4              5.5             29.2             43.8
+ouagadougou                 nan              nan              nan              nan              nan
+segou                       nan              nan              nan              nan              nan
+sikasso                     nan              nan              nan              nan              nan
+southern                   30.1              6.6              7.0             22.3             22.6
+taipei                      nan              nan              nan              nan              nan
+
+Palasatien et al. 2008 found pH 5.0-6.0 the major determinant of
+B. pseudomallei presence, and the SE Asia MaxEnt study found Acrisols
+(acidic, clay-rich) favourable. Compare the Taiwan rows against the West
+African rows: if the soils differ sharply, that is a concrete limit on
+transferability that weather features cannot see - which is exactly what
+expD and expG2 measured but could not explain.
+
+    exit=0
+--- groundwater_to_csv
+nothing in /Users/richard/Documents/Binus/Semester 5/Computation Bio 1/data/raw/groundwater - run scripts/download_groundwater.sh first
+    exit=1
+
+finished Mon Oct  5 06:59:06 WIB 2026

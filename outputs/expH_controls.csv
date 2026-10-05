@@ -1,0 +1,7 @@
+control,auc,ap_lift,expected
+none (the real model),0.8213410948961755,4.547776622618673,reference
+labels shuffled within region,0.8027324492567169,3.511623695604899,should be ~0.50
+weather shifted +26 weeks,0.8203464530486794,3.9879580416189393,should collapse
+weather -> climatology only,0.8026366757494843,4.054587988686572,should collapse
+weather from the wrong region,0.8019219845504252,3.62711730158617,should collapse
+week of year only,0.627754719375724,1.7246464680442128,seasonality floor
